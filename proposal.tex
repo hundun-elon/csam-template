@@ -1,3 +1,440 @@
+% \documentclass[a4paper,twoside,12pt]{report}
+% % Richard Klein (2020,2021)
+
+% % Include Packages
+% %\usepackage[a4paper,inner=3.5cm,outer=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}  % Set page margins
+% \usepackage{fullpage}
+% \usepackage{float}                  % Allows 'Here and Only Here' [H] for Floats
+% \usepackage{url}                    % \url{} command
+% \usepackage{charter}                  % Set font to Times
+% \usepackage{graphicx}               % \includegraphics
+% \usepackage{subfigure}              % Allow subfigures
+% \usepackage{amsmath}
+% \usepackage{amssymb}
+% \usepackage{amsthm}
+% \usepackage{float}
+% \usepackage{booktabs}
+% \usepackage{parskip}
+% \usepackage[all]{nowidow}
+% \setnoclub[2]
+% \setnowidow[2]
+
+% % Referencing
+% % Provides \Vref and \vref to indicate where a reference is.
+% \usepackage{varioref} 
+% % Hyperlinks references
+% \usepackage[bookmarks=true,bookmarksopen=true]{hyperref} 
+% % Provides \Cref, \cref, \Vref, \vref to include the type of reference: fig/eqn/tbl
+% \usepackage{cleveref} 
+% % Setup Hyperref
+% \hypersetup{
+%   colorlinks   = true,              %Colours links instead of ugly boxes
+%   urlcolor     = blue,              %Colour for external hyperlinks
+%   linkcolor    = blue,              %Colour of internal links
+%   citecolor    = blue                %Colour of citations
+% }
+% % Names for Clever Ref
+% \crefname{table}{table}{tables}
+% \Crefname{table}{Table}{Tables}
+% \crefname{figure}{figure}{figures}
+% \Crefname{figure}{Figure}{Figures}
+% \crefname{equation}{equation}{equations}
+% \Crefname{equation}{Equation}{Equations}
+
+% % Wits Citation Style
+% \usepackage{natbib} \input{natbib-add}
+% \bibliographystyle{named-wits}
+% \bibpunct{[}{]}{;}{a}{}{}  % to get correct punctuation for bibliography
+% \setlength{\skip\footins}{1.5cm}
+% \newcommand{\citets}[1]{\citeauthor{#1}'s \citeyearpar{#1}}
+% \renewcommand\bibname{References}  
+
+% \pagestyle{headings}
+
+% \pagestyle{plain}
+% \pagenumbering{roman}
+
+% \renewenvironment{abstract}{\ \vfill\begin{center}\textbf{Abstract}\end{center}\addcontentsline{toc}{section}{Abstract}}{\vfill\vfill\newpage}
+% \newenvironment{declaration}{\ \vfill\begin{center}\textbf{Declaration}\end{center}\addcontentsline{toc}{section}{Declaration}}{\vfill\vfill\newpage}
+% \newenvironment{acknowledgements}{\ \vfill\begin{center}\textbf{Acknowledgements}\end{center}\addcontentsline{toc}{section}{Acknowledgements}}{\vfill\vfill\newpage}
+
+% \begin{document}
+% \onecolumn
+% \thispagestyle{empty}
+
+% \setcounter{page}{0}
+% \addcontentsline{toc}{chapter}{Preface}
+% \ 
+% \begin{center}
+%   \vfill
+%   {
+%   \huge \bf \textsc{Automated Grading of Free-Text Student Submissions Using Large Language Models.}\\
+%   \large Subtitle\\[20pt]
+%   \large School of Computer Science \& Applied Mathematics\\
+%   \large University of the Witwatersrand\\[20pt]
+%   \normalsize
+%   Sphamandla Mbuyazi\\
+%   2618115\\[20pt]
+%   Supervised by Prof. Richard Klein\\[10pt]
+%   \today
+%   }
+
+%   \vfill
+%   \vfill
+%   \includegraphics[width=1.5cm]{images/wits}
+%   \vspace{10pt}\\
+%   \small{Ethics Clearance Number: XX/XX/XX}\\[10pt]
+%   \small{A proposal submitted to the Faculty of Science, University of the Witwatersrand, Johannesburg,
+% in partial fulfilment of the requirements for the degree of Bachelor of Science with Honours}\\
+% \end{center}
+% \vfill
+% \newpage
+
+% \pagestyle{plain}
+% \setcounter{page}{1}
+
+% \phantomsection
+% \begin{abstract}
+% Abstract things....
+% \end{abstract}
+
+% \phantomsection
+% \begin{declaration}
+% I, Sphamandla Mbuyazi, hereby declare the contents of this research proposal to be my own work.
+% This proposal is submitted for the degree of Bachelor of Science with Honours in Computer Science at the University of the Witwatersrand.
+% This work has not been submitted to any other university, or for any other degree.
+% \end{declaration}
+
+% \phantomsection
+% \begin{acknowledgements}
+% Thanks World.
+% \end{acknowledgements}
+
+
+% \phantomsection
+% \addcontentsline{toc}{section}{Table of Contents}
+% \tableofcontents
+% \newpage
+% \phantomsection
+% \addcontentsline{toc}{section}{List of Figures}
+% \listoffigures
+% \newpage
+% \phantomsection
+% \addcontentsline{toc}{section}{List of Tables}
+% \listoftables
+% \newpage
+% \pagenumbering{arabic}
+
+% \chapter{Introduction}
+% \section{Introduction}
+% % introduction paragraph.
+%   In education technology, auto grading of free text has long been a sought-for solution,
+%   particulary in large-scale assessments and technical subjects like Computer Science , where
+%   assessments cannot be easily reduced to multiple choice questions. As the number of students enrolled in 
+%   a course increases per instructor and the curriculum becomes more demanding, educators face a mounting pressure
+%   to provide fair, consistant and fast feedback.\\
+
+%   This posses a need to try to automate the process of marking and giving feedback. In the
+%   state of art of education right now, your instructor grades your assessments and 4 years later 
+%   provides you with a feedback, as we can argue without proof that early feedback helps students 
+%   perform better in their studies. \\
+
+% At the same time, Large Language Models(LLMs) like GPT-4, Claude, and open-source alternative
+% such as LLaMA and DeepSeek are proving to be not just the conversational tools but
+% they are capable evaluators, summarizers, and even tutors. Their impressive capacity
+% for natural Language understanding and generation raises an exciting possibility:
+
+% Can these models be harnessed to grade student responses automatically and meaningfully?
+% --and perhaps even provide personalized feedback that guides learning?
+
+
+% \subsection{Purpose of this review}
+% % \subsection{This is a Subsection}
+% % \subsubsection{This is a subsubsection}
+% The aim of this review is to syntesize and critically examine recent research
+% on the use of LLMs for autograding and feedback generation in educational contexts.
+% We shall look at how these models have been applied to assess student submissions,
+% what techniques have been used to improve reliability and fairness, and how feedback
+% mechanisms are integrated to support and elevate student learning.\\
+% By comparing methodologies, models and findings we aim to infer what is 
+% working, what remains challenging, and where there's space for improvement.
+% This should ultimately inform how we design our own LLM-based grading system 
+% for technical subjects, one that minimizes educators workload while enhancing the feedback experienca 
+
+
+
+% \subsection{Brief overview of the key themes}
+% Across the literature I have examimed, several key themes and technical strategies emerge.
+
+% \begin{table}[h!]
+%   \centering
+%   \begin{tabular}{|p{5cm}|p{12cm}|}
+%   \hline
+%   \textbf{Theme} & \textbf{Approaches / Observations} \\
+%   \hline
+%   Grading Accuracy & LLMs like GPT-4 and fine-tuned BERT models show strong agreement with human graders. \\
+%   \hline
+%   Feedback Generation & Models like BeGrading and GPT-4 in science writing generate formative feedback students find useful. \\
+%   \hline
+%   Explainability & SHAP explanations and linguistic feature analysis offer insight into deep model decisions. \\
+%   \hline
+%   Data Efficiency & Active learning (uncertainty, topology, hybrid methods) helps reduce labeling needs. \\
+%   \hline
+%   Prompt Engineering & Careful prompt design significantly improves LLM grading consistency and relevance. \\
+%   \hline
+%   Peer/Human-in-the-loop & Hybrid systems using peer grading or instructor scaffolding improve fairness and training. \\
+%   \hline
+%   Open-Source Model Potential & LLaMA 2 and Falcon perform comparably to commercial models in bioinformatics grading tasks. \\
+%   \hline
+%   \end{tabular}
+%   \caption{Themes and Observations in AI-based Educational Assessment}
+%   \label{tab:grading_ai_themes}
+%   \end{table}
+% We shall explore the above themes in deapth next section, critically comparing the approaches, results
+% and proposed direction of each study.
+% \chapter{Body}
+% \section{Body.}
+% \subsection{From Black-Box to transparent graders}
+% \textit{We trust teachers because when we ask them why, they give us a sensible responses; can we do the same for machines?}\\
+% In the early days of Automated Essay Scoring(AES), the focus was primaraly on \textbf{Accuracy}: this means
+% really we were answering the question could a machine assign the same score a human would?
+% Systems like e-raters while wildy adopted, remained blacked boxes. What this essentially means is 
+% it can produce grades without justification. Without clear reasoning for scores, students were left with 
+% limited guidance for improvement, and the instructors struggled to verify the fairness and reliability of these systems.\\
+% Mok (2023) addressed this limitation by developing a deep learning AES model based on a Multi-Layer Perceptron (MLP) architecture, trained on the ASAP Grade 7 narrative writing dataset. The model predicted rubric-level scores across four dimensions — ideas, organization, style, and conventions. Importantly, this work introduced SHAP (SHapley Additive exPlanations) to improve interpretability. SHAP provided both global (dataset-wide) and local (individual essay) feature attributions, making it possible to understand how linguistic features (such as lexical diversity, grammatical structure, or cohesion) contributed to predicted scores.\\
+% The model extracted over 1,500 linguistic indices using the SALAT toolkit, representing textual characteristics across five linguistic domains. Through regularization (Lasso and Ridge), the most informative features were selected. The SHAP analysis revealed that longer essays with richer lexical variety, clearer cohesion, and fewer grammatical errors were consistently rated higher by both human and automated systems. This provided not just a mechanism for score prediction, but a foundation for pedagogically meaningful feedback.\\
+% Despite these advances, a challenge remained: although SHAP offered detailed attribution scores, the model lacked the ability to transform those insights into actionable, human-readable feedback for students. Mok (2023) acknowledges that while these explanations are useful to researchers and educators, additional work is needed to make them accessible and educationally impactful for learners.\\
+% This work forms a foundation for more recent research that aims to not only predict scores with transparency, but to deliver feedback that supports learning. In doing so, it repositions the role of the AES system — from a passive grader to an active participant in the learning process.
+% The table below summarizes this study.
+% \begin{table}[h!]
+%   \centering
+%   \begin{tabular}{|p{4.5cm}|p{10.5cm}|}
+%   \hline
+%   \textbf{Aspect} & \textbf{Details} \\
+%   \hline
+%   Study Objective & Develop an explainable deep learning model to score essays and highlight linguistic features affecting grades \\
+%   \hline
+%   Dataset Used & ASAP Grade 7 Narrative Essays (1,567 essays, scored on 0–3 scale across four rubrics) \\
+%   \hline
+%   Model Type & Multi-Layer Perceptron (MLP) with 2–6 hidden layers \\
+%   \hline
+%   Input Features & 1,592 linguistic features extracted via SALAT toolkit (e.g., cohesion, syntax, grammar) \\
+%   \hline
+%   Feature Selection & Lasso \& Ridge Regression; low-variance filtering \\
+%   \hline
+%   Explainability Technique & SHAP (KernelSHAP, DeepSHAP, GradientSHAP) \\
+%   \hline
+%   Top Features for High Scores & 
+%   \begin{itemize}
+%     \item Essay length
+%     \item Lexical diversity
+%     \item Sentence complexity
+%     \item Cohesive ties
+%     \item Correct grammar usage
+%   \end{itemize} \\
+%   \hline
+%   Key Strength & SHAP provides global and local explanations; reveals what textual features matter most \\
+%   \hline
+%   Main Limitation & Explanations not yet in student-readable, feedback-ready form \\
+%   \hline
+%   \end{tabular}
+%   \caption{Summary of Mok (2023) — Explainable AES with SHAP Analysis}
+%   \label{tab:mok2023_summary}
+%   \end{table}
+  
+%   \subsection{Feedback Generation and Instructional Support via Large Language Models}
+%   Recent research has moved beyond simply using LLMs to assign grades, exploring their potential to deliver personalized feedback — a critical element in promoting student learning. Feedback not only clarifies why a response was graded a certain way but also guides students on how to improve. Studies now show that, with appropriate guidance, LLMs can simulate this instructional role.
+
+%   In one study, Poličar et al. (2025) applied LLMs in a bioinformatics course to grade written assignments and provide feedback. Six models were tested, including commercial options (GPT-4, GPT-3.5, Claude) and open-source alternatives (LLaMA 2, Falcon 40B). Using a blind evaluation, students rated feedback without knowing its source. Notably, feedback from LLMs was often rated as helpful as that from human teaching assistants. Open-source models performed comparably to commercial ones, suggesting viable, privacy-conscious pathways for educational deployment.
+  
+%   This success relied on prompt engineering: feeding the model structured inputs like the correct answer, grading rubrics, and example responses. This enabled models to produce relevant, contextualized feedback without the need for fine-tuning.
+  
+%   Similarly, Impey et al. (2024) investigated GPT-4's grading capabilities in science writing. Given a rubric and model answer, GPT-4 reliably scored and explained its decisions, demonstrating instructional potential across domains.
+  
+%   Both studies emphasize that when guided properly, LLMs can offer explanations and suggestions — not just evaluations. However, limitations remain. LLMs may overlook subtle domain-specific issues, and the quality of their feedback heavily depends on prompt clarity and structure.
+
+%   \begin{table}[h!]
+%     \centering
+%     \begin{tabular}{|p{3.5cm}|p{6.5cm}|p{6.5cm}|}
+%     \hline
+%     \textbf{Aspect} & \textbf{Poličar et al. (2025)} & \textbf{Impey et al. (2024)} \\
+%     \hline
+%     Educational Context & Bioinformatics course (university-level, >100 students) & MOOCs in astronomy and astrobiology (Coursera platform) \\
+%     \hline
+%     Task Type & Written explanations of data analyses in assignments & Short essay-style answers to open-ended science questions \\
+%     \hline
+%     Models Evaluated & GPT-4, GPT-3.5, Claude, LLaMA 2 (13B, 70B), Falcon 40B & GPT-4 \\
+%     \hline
+%     Grading Setup & Blind evaluation comparing LLM feedback to human TA feedback & Comparison to instructor grades; GPT-4 guided with rubric and model answer \\
+%     \hline
+%     Feedback Approach & Prompt engineering using rubrics, sample answers, and solutions & Rubric-based grading and rubric generation by the model \\
+%     \hline
+%     Key Findings & LLM feedback rated equal to human TAs; open-source models performed well & GPT-4 grading reliable and more consistent than peer grading \\
+%     \hline
+%     Limitations & Occasional domain-specific misses; dependent on prompt quality & Performance tied closely to rubric design; limited subject scope \\
+%     \hline
+%     \end{tabular}
+%     \caption{Summary of Studies on LLM-Based Feedback Generation}
+%     \label{tab:llm_feedback_studies}
+%     \end{table}
+% \subsection{Scaling Automated Grading with Active Learning and Data Efficiency}
+% One of the major limitations of early automated grading systems was the reliance on large, hand-labeled datasets. For each new exam question or assignment, new data had to be collected and annotated by human graders — a process that is expensive, time-consuming, and difficult to maintain across academic years or changing syllabi.
+
+% To address this, several studies have explored active learning and weak supervision as strategies to reduce labeling requirements while maintaining model performance. These approaches aim to identify the most informative student submissions for human annotation, so that models can learn effectively from fewer examples.
+
+% A foundational contribution to this area is the Active Learning Literature Survey by Settles (2010), which outlines a taxonomy of strategies such as uncertainty sampling, query-by-committee, and expected error reduction. These techniques are highly relevant in educational contexts, where human labeling is costly and scalability is essential. The survey laid the groundwork for newer applications of active learning in grading tasks.
+
+% Building on these principles, Firoozi et al. (2023) applied active learning directly to the task of Automated Essay Scoring (AES). Their study evaluated three methods for selecting student essays for annotation:
+% \begin{itemize}
+%  {
+%   \item Uncertainty-Based Selection (selecting essays where the model is least confident),
+%   \item Topological-Based Selection (selecting a diverse, representative sample),
+%  \item and a Hybrid Method, which combines both uncertainty and representativeness.
+%  }
+% \end{itemize}
+% The results were significant: using just $1.8\%$ of the total dataset with the topological method, their model achieved 95\% of full-model accuracy. The hybrid method provided slightly lower accuracy but greater stability across sample sizes. The study also demonstrated the effectiveness of fine-tuning BERT on strategically selected essays — achieving strong grading performance with far fewer labels.
+
+% These findings suggest that LLM-powered grading systems do not need large training sets, especially when paired with smart sampling strategies. For institutions with limited resources, these methods offer a practical path forward: instructors only need to grade a small portion of responses, which are then used to train models that generalize to the rest of the cohort.
+% \begin{table}[h!]
+%   \centering
+%   \begin{tabular}{|p{3.5cm}|p{6.5cm}|p{6.5cm}|}
+%   \hline
+%   \textbf{Aspect} & \textbf{Settles (2010)} & \textbf{Firoozi et al. (2023)} \\
+%   \hline
+%   Contribution Type & Survey of active learning strategies & Applied active learning to AES using real essay data \\
+%   \hline
+%   Context & General ML framework (text, image, bioinformatics, etc.) & AES on ASAP dataset with $\sim$13k student essays \\
+%   \hline
+%   Methods Evaluated & Uncertainty sampling, query-by-committee, error reduction & Uncertainty-based, topological, and hybrid selection \\
+%   \hline
+%   Models Used & Conceptual (broad ML) & BERT-based AES model \\
+%   \hline
+%   Key Findings & Active learning reduces labeling needs in various domains & 1.8\% of data yielded 95\% accuracy using topological selection \\
+%   \hline
+%   Implications for Grading & Foundation for later AES strategies & Effective grading at scale with minimal human-annotated data \\
+%   \hline
+%   Limitations & Not grading-specific & Model performance depends on sample quality and essay prompt complexity \\
+%   \hline
+%   \end{tabular}
+%   \caption{Summary of Studies on Scaling AES with Active Learning}
+%   \label{tab:active_learning_aes}
+%   \end{table}
+  
+% \subsection{Designing Prompts That Teach the Model how to Grade}.
+% Unlike traditional machine learning models, which often require large datasets and model retraining, Large Language Models (LLMs) like GPT-4 and Claude offer a flexible alternative through prompt engineering. Rather than changing the model’s architecture or weights, researchers modify the input instructions — giving the model examples, rubrics, and specific grading criteria — in order to guide its behavior.
+
+% This approach is especially valuable in educational settings where questions, learning outcomes, and grading schemes often change. Rather than training a new model every year, instructors can adapt their prompts to fit new assessment contexts.
+
+% The study by Bengtsson and Kaliff (2024) investigated this strategy in the context of a university-level programming course. Students submitted answers to open-ended programming questions, and GPT-4 was used to assess their responses. The model was not fine-tuned; instead, it was guided using structured prompts that included:
+% \begin{itemize}
+%   {\item The expected solution,
+%   \item Marking criteria,
+%   \item And example answers.}
+% \end{itemize}
+% This allowed GPT-4 to evaluate correctness, partial understanding, and even misconceptions, much like a human grader. Importantly, the study found that the LLM’s scores aligned closely with instructor assessments, indicating that a well-structured prompt can replicate domain-specific human grading with high reliability.
+
+% In a similar direction, Impey et al. (2024) explored whether GPT-4 could generate its own grading rubric for short-answer science responses. In this case, the model was first given a model answer and examples of correct responses. It then generated both the rubric and the grades for unseen answers. The model’s output was consistent with instructor grades, and its explanations added clarity to the assessment. However, the authors noted that the model’s grading quality depended heavily on how clearly the prompt was written, reinforcing the importance of human guidance in the prompt design process.
+
+% These findings show that prompt engineering functions as a low-cost, high-impact alternative to model retraining. It empowers educators to adjust LLM behavior across subjects and cohorts, while maintaining grading consistency and interpretability. However, this method does require pedagogical expertise: poorly designed prompts can introduce ambiguity or bias, particularly in highly technical domains.
+% \begin{table}[H]
+%   \centering
+%   \begin{tabular}{|p{3.5cm}|p{6.5cm}|p{6.5cm}|}
+%   \hline
+%   \textbf{Aspect} & \textbf{Bengtsson \& Kaliff (2024)} & \textbf{Impey et al. (2024)} \\
+%   \hline
+%   Context & Programming assessments (university-level CS course) & Short-answer science responses (astronomy MOOCs) \\
+%   \hline
+%   Model Used & GPT-4 & GPT-4 \\
+%   \hline
+%   Technique & Prompt engineering with expected answers and rubrics & Prompted GPT-4 to generate grading rubric and assign scores \\
+%   \hline
+%   Evaluation & Compared to instructor scores & Compared to instructor grading and peer evaluations \\
+%   \hline
+%   Findings & High agreement with human graders; accurate on domain concepts & GPT-4 reliable, but sensitive to prompt clarity \\
+%   \hline
+%   Limitations & Requires domain-specific prompt design & Rubric generation quality varies with input phrasing \\
+%   \hline
+%   \end{tabular}
+%   \caption{Summary of Studies Using Prompt Engineering and Rubric Conditioning}
+%   \label{tab:prompt_rubric_conditioning}
+%   \end{table}
+  
+% \subsection{A Subsection about Citation Style}
+% Citations are important. Citation style for Computer Science is:
+% \begin{itemize}
+% \item When used in the text, use the authors with the date in brackets:\\ \citet{klein17} say very important things.
+% \item When used as a reference after a face, put everything in brackets:\\ Import things are true \citep{klein17}.
+% \end{itemize}
+
+% \subsection{Compiling}
+% Remember to compile multiple times to resolve references. Usually:
+% \begin{verbatim}
+% pdflatex file.tex
+% bibtex file
+% pdflatex file.tex
+% pdflatex file.tex
+% \end{verbatim}
+
+
+% \chapter{Floats}
+% \LaTeX\ decides how to place images. It also does the referencing for you as seen in \Cref{fig:thing1}. If you have subimages, they should have their own captions and labels -- look into the subfig or subfigure packages.
+
+% \begin{figure}[ht]
+% 	\centering
+% 	\includegraphics[width=0.1\linewidth]{images/wits}
+% 	\caption{This is an image}
+% 	\label{fig:thing1}
+% \end{figure}
+
+% Figure captions are at the bottom. Table title are at the top of the table as seen in \Vref{tab:tab1}. There is a package called BookTabs which is \textit{way} better for tables and you should learn how to use that instead.
+
+% \begin{table}[p]
+% 	\centering
+% 	\caption{Table Name}
+% 	\label{tab:tab1}
+% \begin{tabular}{cc}
+% 	\hline
+% 	Col1 & Col2\\
+% 	\hline\hline 
+% 	R0,C0 & R0,C1 \\ 
+% 	R1,C0 & R1,C1 \\ 
+% 	\hline
+% \end{tabular} 
+% \end{table}
+
+% Usually let \LaTeX\ handle the placement of floats unless you \textit{really} need to force it to do something else. The \texttt{float} package used above allows you to use \texttt{H} as the placement which means \textit{here and only here}. When using the float package, the placement options are:
+% \begin{enumerate}
+% \item h -- a gentle nudge to place it here if possible
+% \item t -- top of a page
+% \item b -- bottom of a page
+% \item H -- here and only here, do not move it at all
+% \item p -- on its own page
+% \end{enumerate}
+
+
+% \chapter{Some Referencing Tricks}
+% CleverRef and VarioRef are helpful:
+% \begin{itemize}
+% 	\item Normal Ref: See Figure \ref{fig:thing1}
+% 	\item CleverRef: See \Cref{fig:thing1} and \Cref{tab:tab1}
+% 	\item CleverRef+VarioRef: See \Vref{fig:thing1} and \Vref{tab:tab1}
+% \end{itemize}
+
+% \chapter{IDE/Editors}
+% Overleaf has a great online editor for latex. Use it. 
+
+% \appendix
+% \chapter{Extra Stuff}\label{app:extra}
+% \section{What is an appendix?}\label{app:whatis}
+
+% An appendix is useful when there is information that you need to include, but breaks the flow of your document, e.g. a large number of figures/tables may need to be shown, but maybe only one needs to be in the text and the rest are just included for completeness.
+
+% \nocite{*}
+
+% \bibliography{references}\addcontentsline{toc}{chapter}{References}
+% \end{document}
+
+
 \documentclass[a4paper,twoside,12pt]{report}
 % Richard Klein (2020,2021)
 
@@ -6,14 +443,13 @@
 \usepackage{fullpage}
 \usepackage{float}                  % Allows 'Here and Only Here' [H] for Floats
 \usepackage{url}                    % \url{} command
-\usepackage{charter}                  % Set font to Times
+\usepackage{charter}                % Set font to Charter
 \usepackage{graphicx}               % \includegraphics
 \usepackage{subfigure}              % Allow subfigures
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
-\usepackage{float}
-\usepackage{booktabs}
+\usepackage{booktabs}               % Better tables
 \usepackage{parskip}
 \usepackage[all]{nowidow}
 \setnoclub[2]
@@ -28,10 +464,10 @@
 \usepackage{cleveref} 
 % Setup Hyperref
 \hypersetup{
-  colorlinks   = true,              %Colours links instead of ugly boxes
-  urlcolor     = blue,              %Colour for external hyperlinks
-  linkcolor    = blue,              %Colour of internal links
-  citecolor    = blue                %Colour of citations
+  colorlinks   = true,              % Colours links instead of ugly boxes
+  urlcolor     = blue,              % Colour for external hyperlinks
+  linkcolor    = blue,              % Colour of internal links
+  citecolor    = blue               % Colour of citations
 }
 % Names for Clever Ref
 \crefname{table}{table}{tables}
@@ -95,7 +531,7 @@ in partial fulfilment of the requirements for the degree of Bachelor of Science 
 
 \phantomsection
 \begin{abstract}
-Abstract things....
+This literature review examines recent advancements in automated grading of free-text student submissions using Large Language Models (LLMs). The review explores how models like GPT-4, Claude, and open-source alternatives are being applied to assess written responses, provide feedback, and support learning. Key themes include grading accuracy, feedback generation, explainability of grading decisions, data efficiency through active learning, and prompt engineering techniques. The findings suggest that LLMs show promising potential for reducing educator workload while maintaining assessment quality comparable to human graders, though challenges in fairness, reliability, and domain-specific accuracy remain. This review aims to synthesize current research to inform future development of LLM-based grading systems that enhance educational assessment while supporting student learning through meaningful feedback.
 \end{abstract}
 
 \phantomsection
@@ -107,9 +543,10 @@ This work has not been submitted to any other university, or for any other degre
 
 \phantomsection
 \begin{acknowledgements}
-Thanks World.
-\end{acknowledgements}
+I would like to express my sincere gratitude to my supervisor, Prof. Richard Klein, for his guidance, expertise, and support throughout this research process. I also extend my thanks to the School of Computer Science \& Applied Mathematics for providing the resources and academic environment conducive to this work.
 
+Special appreciation goes to my peers and the teaching assistants who offered valuable insights and encouragement. Finally, I thank my family for their unwavering support during my academic journey.
+\end{acknowledgements}
 
 \phantomsection
 \addcontentsline{toc}{section}{Table of Contents}
@@ -126,308 +563,286 @@ Thanks World.
 \pagenumbering{arabic}
 
 \chapter{Introduction}
-\section{Introduction}
-% introduction paragraph.
-  In education technology, auto grading of free text has long been a sought-for solution,
-  particulary in large-scale assessments and technical subjects like Computer Science , where
-  assessments cannot be easily reduced to multiple choice questions. As the number of students enrolled in 
-  a course increases per instructor and the curriculum becomes more demanding, educators face a mounting pressure
-  to provide fair, consistant and fast feedback.\\
 
-  This posses a need to try to automate the process of marking and giving feedback. In the
-  state of art of education right now, your instructor grades your assessments and 4 years later 
-  provides you with a feedback, as we can argue without proof that early feedback helps students 
-  perform better in their studies. \\
+\section{Background and Motivation}
+In education technology, auto-grading of free text has long been a sought-after solution, particularly in large-scale assessments and technical subjects like Computer Science, where assessments cannot be easily reduced to multiple choice questions. As the number of students enrolled in courses increases per instructor and curricula become more demanding, educators face mounting pressure to provide fair, consistent, and timely feedback.
 
-At the same time, Large Language Models(LLMs) like GPT-4, Claude, and open-source alternative
-such as LLaMA and DeepSeek are proving to be not just the conversational tools but
-they are capable evaluators, summarizers, and even tutors. Their impressive capacity
-for natural Language understanding and generation raises an exciting possibility:
+This poses a need to automate the process of marking and giving feedback. In the current state of education, instructors often grade assessments with significant delays, sometimes providing feedback weeks or months after submission. Research suggests that early feedback helps students perform better in their studies, creating an imperative for more efficient grading solutions \citep{shute2008focus}.
 
-Can these models be harnessed to grade student responses automatically and meaningfully?
---and perhaps even provide personalized feedback that guides learning?
+At the same time, Large Language Models (LLMs) like GPT-4, Claude, and open-source alternatives such as LLaMA and DeepSeek are proving to be not just conversational tools but capable evaluators, summarizers, and even tutors. Their impressive capacity for natural language understanding and generation raises an exciting possibility: Can these models be harnessed to grade student responses automatically and meaningfully—and perhaps even provide personalized feedback that guides learning?
 
+\section{Purpose of this Review}
+The aim of this review is to synthesize and critically examine recent research on the use of LLMs for auto-grading and feedback generation in educational contexts. We examine how these models have been applied to assess student submissions, what techniques have been used to improve reliability and fairness, and how feedback mechanisms are integrated to support and elevate student learning.
 
-\subsection{Purpose of this review}
-% \subsection{This is a Subsection}
-% \subsubsection{This is a subsubsection}
-The aim of this review is to syntesize and critically examine recent research
-on the use of LLMs for autograding and feedback generation in educational contexts.
-We shall look at how these models have been applied to assess student submissions,
-what techniques have been used to improve reliability and fairness, and how feedback
-mechanisms are integrated to support and elevate student learning.\\
-By comparing methodologies, models and findings we aim to infer what is 
-working, what remains challenging, and where there's space for improvement.
-This should ultimately inform how we design our own LLM-based grading system 
-for technical subjects, one that minimizes educators workload while enhancing the feedback experienca 
+By comparing methodologies, models, and findings, we aim to identify what is working, what remains challenging, and where there's space for improvement. This should ultimately inform the design of LLM-based grading systems for technical subjects that minimize educators' workload while enhancing the feedback experience for students.
 
+\section{Key Themes in LLM-Based Educational Assessment}
+Across the literature examined, several key themes and technical strategies emerge that frame the current state of research in AI-based educational assessment.
 
-
-\subsection{Brief overview of the key themes}
-Across the literature I have examimed, several key themes and technical strategies emerge.
-
-\begin{table}[h!]
+\begin{table}[h]
   \centering
-  \begin{tabular}{|p{5cm}|p{12cm}|}
-  \hline
-  \textbf{Theme} & \textbf{Approaches / Observations} \\
-  \hline
-  Grading Accuracy & LLMs like GPT-4 and fine-tuned BERT models show strong agreement with human graders. \\
-  \hline
-  Feedback Generation & Models like BeGrading and GPT-4 in science writing generate formative feedback students find useful. \\
-  \hline
-  Explainability & SHAP explanations and linguistic feature analysis offer insight into deep model decisions. \\
-  \hline
-  Data Efficiency & Active learning (uncertainty, topology, hybrid methods) helps reduce labeling needs. \\
-  \hline
-  Prompt Engineering & Careful prompt design significantly improves LLM grading consistency and relevance. \\
-  \hline
-  Peer/Human-in-the-loop & Hybrid systems using peer grading or instructor scaffolding improve fairness and training. \\
-  \hline
-  Open-Source Model Potential & LLaMA 2 and Falcon perform comparably to commercial models in bioinformatics grading tasks. \\
-  \hline
-  \end{tabular}
   \caption{Themes and Observations in AI-based Educational Assessment}
   \label{tab:grading_ai_themes}
-  \end{table}
-We shall explore the above themes in deapth next section, critically comparing the approaches, results
-and proposed direction of each study.
-\chapter{Body}
-\section{Body.}
-\subsection{From Black-Box to transparent graders}
-\textit{We trust teachers because when we ask them why, they give us a sensible responses; can we do the same for machines?}\\
-In the early days of Automated Essay Scoring(AES), the focus was primaraly on \textbf{Accuracy}: this means
-really we were answering the question could a machine assign the same score a human would?
-Systems like e-raters while wildy adopted, remained blacked boxes. What this essentially means is 
-it can produce grades without justification. Without clear reasoning for scores, students were left with 
-limited guidance for improvement, and the instructors struggled to verify the fairness and reliability of these systems.\\
-Mok (2023) addressed this limitation by developing a deep learning AES model based on a Multi-Layer Perceptron (MLP) architecture, trained on the ASAP Grade 7 narrative writing dataset. The model predicted rubric-level scores across four dimensions — ideas, organization, style, and conventions. Importantly, this work introduced SHAP (SHapley Additive exPlanations) to improve interpretability. SHAP provided both global (dataset-wide) and local (individual essay) feature attributions, making it possible to understand how linguistic features (such as lexical diversity, grammatical structure, or cohesion) contributed to predicted scores.\\
-The model extracted over 1,500 linguistic indices using the SALAT toolkit, representing textual characteristics across five linguistic domains. Through regularization (Lasso and Ridge), the most informative features were selected. The SHAP analysis revealed that longer essays with richer lexical variety, clearer cohesion, and fewer grammatical errors were consistently rated higher by both human and automated systems. This provided not just a mechanism for score prediction, but a foundation for pedagogically meaningful feedback.\\
-Despite these advances, a challenge remained: although SHAP offered detailed attribution scores, the model lacked the ability to transform those insights into actionable, human-readable feedback for students. Mok (2023) acknowledges that while these explanations are useful to researchers and educators, additional work is needed to make them accessible and educationally impactful for learners.\\
-This work forms a foundation for more recent research that aims to not only predict scores with transparency, but to deliver feedback that supports learning. In doing so, it repositions the role of the AES system — from a passive grader to an active participant in the learning process.
-The table below summarizes this study.
-\begin{table}[h!]
-  \centering
-  \begin{tabular}{|p{4.5cm}|p{10.5cm}|}
-  \hline
-  \textbf{Aspect} & \textbf{Details} \\
-  \hline
-  Study Objective & Develop an explainable deep learning model to score essays and highlight linguistic features affecting grades \\
-  \hline
-  Dataset Used & ASAP Grade 7 Narrative Essays (1,567 essays, scored on 0–3 scale across four rubrics) \\
-  \hline
-  Model Type & Multi-Layer Perceptron (MLP) with 2–6 hidden layers \\
-  \hline
-  Input Features & 1,592 linguistic features extracted via SALAT toolkit (e.g., cohesion, syntax, grammar) \\
-  \hline
-  Feature Selection & Lasso \& Ridge Regression; low-variance filtering \\
-  \hline
-  Explainability Technique & SHAP (KernelSHAP, DeepSHAP, GradientSHAP) \\
-  \hline
-  Top Features for High Scores & 
-  \begin{itemize}
-    \item Essay length
-    \item Lexical diversity
-    \item Sentence complexity
-    \item Cohesive ties
-    \item Correct grammar usage
-  \end{itemize} \\
-  \hline
-  Key Strength & SHAP provides global and local explanations; reveals what textual features matter most \\
-  \hline
-  Main Limitation & Explanations not yet in student-readable, feedback-ready form \\
-  \hline
+  \begin{tabular}{@{}p{5cm}p{11cm}@{}}
+  \toprule
+  \textbf{Theme} & \textbf{Approaches / Observations} \\
+  \midrule
+  Grading Accuracy & LLMs like GPT-4 and fine-tuned BERT models show strong agreement with human graders \citep{impey2024} \\
+  \midrule
+  Feedback Generation & Models like BeGrading and GPT-4 generate formative feedback students find useful \citep{polikar2025} \\
+  \midrule
+  Explainability & SHAP explanations and linguistic feature analysis offer insight into model decisions \citep{mok2023} \\
+  \midrule
+  Data Efficiency & Active learning (uncertainty, topology, hybrid methods) helps reduce labeling needs \citep{firoozi2023} \\
+  \midrule
+  Prompt Engineering & Careful prompt design significantly improves LLM grading consistency \citep{bengtsson2024} \\
+  \midrule
+  Peer/Human-in-the-loop & Hybrid systems using peer grading or instructor scaffolding improve fairness \citep{impey2024} \\
+  \midrule
+  Open-Source Model Potential & LLaMA 2 and Falcon perform comparably to commercial models in some tasks \citep{polikar2025} \\
+  \bottomrule
   \end{tabular}
+\end{table}
+
+We shall explore these themes in depth in the following sections, critically comparing the approaches, results, and proposed directions of each study.
+
+\chapter{Current Research in LLM-Based Grading}
+
+\section{From Black-Box to Transparent Graders}
+\textit{We trust teachers because when we ask them why, they give us sensible responses; can we do the same for machines?}
+
+In the early days of Automated Essay Scoring (AES), the focus was primarily on \textbf{accuracy}: could a machine assign the same score a human would? Systems like e-raters, while widely adopted, remained black boxes—producing grades without justification. Without clear reasoning for scores, students were left with limited guidance for improvement, and instructors struggled to verify the fairness and reliability of these systems.
+
+\citet{mok2023} addressed this limitation by developing a deep learning AES model based on a Multi-Layer Perceptron (MLP) architecture, trained on the ASAP Grade 7 narrative writing dataset. The model predicted rubric-level scores across four dimensions—ideas, organization, style, and conventions. Importantly, this work introduced SHAP (SHapley Additive exPlanations) to improve interpretability. SHAP provided both global (dataset-wide) and local (individual essay) feature attributions, making it possible to understand how linguistic features contributed to predicted scores.
+
+The model extracted over 1,500 linguistic indices using the SALAT toolkit, representing textual characteristics across five linguistic domains. Through regularization (Lasso and Ridge), the most informative features were selected. The SHAP analysis revealed that longer essays with richer lexical variety, clearer cohesion, and fewer grammatical errors were consistently rated higher by both human and automated systems. This provided not just a mechanism for score prediction, but a foundation for pedagogically meaningful feedback.
+
+Despite these advances, a challenge remained: although SHAP offered detailed attribution scores, the model lacked the ability to transform those insights into actionable, human-readable feedback for students. \citet{mok2023} acknowledges that while these explanations are useful to researchers and educators, additional work is needed to make them accessible and educationally impactful for learners.
+
+This work forms a foundation for more recent research that aims to not only predict scores with transparency but to deliver feedback that supports learning. In doing so, it repositions the role of the AES system—from a passive grader to an active participant in the learning process.
+
+\begin{table}[h]
+  \centering
   \caption{Summary of Mok (2023) — Explainable AES with SHAP Analysis}
   \label{tab:mok2023_summary}
-  \end{table}
+  \begin{tabular}{@{}p{4.5cm}p{10.5cm}@{}}
+  \toprule
+  \textbf{Aspect} & \textbf{Details} \\
+  \midrule
+  Study Objective & Develop an explainable deep learning model to score essays and highlight linguistic features affecting grades \\
+  \midrule
+  Dataset Used & ASAP Grade 7 Narrative Essays (1,567 essays, scored on 0–3 scale across four rubrics) \\
+  \midrule
+  Model Type & Multi-Layer Perceptron (MLP) with 2–6 hidden layers \\
+  \midrule
+  Input Features & 1,592 linguistic features extracted via SALAT toolkit (e.g., cohesion, syntax, grammar) \\
+  \midrule
+  Feature Selection & Lasso \& Ridge Regression; low-variance filtering \\
+  \midrule
+  Explainability Technique & SHAP (KernelSHAP, DeepSHAP, GradientSHAP) \\
+  \midrule
+  Top Features for High Scores & 
+  • Essay length
+  • Lexical diversity
+  • Sentence complexity
+  • Cohesive ties
+  • Correct grammar usage \\
+  \midrule
+  Key Strength & SHAP provides global and local explanations; reveals what textual features matter most \\
+  \midrule
+  Main Limitation & Explanations not yet in student-readable, feedback-ready form \\
+  \bottomrule
+  \end{tabular}
+\end{table}
   
-  \subsection{Feedback Generation and Instructional Support via Large Language Models}
-  Recent research has moved beyond simply using LLMs to assign grades, exploring their potential to deliver personalized feedback — a critical element in promoting student learning. Feedback not only clarifies why a response was graded a certain way but also guides students on how to improve. Studies now show that, with appropriate guidance, LLMs can simulate this instructional role.
+\section{Feedback Generation and Instructional Support}
+Recent research has moved beyond simply using LLMs to assign grades, exploring their potential to deliver personalized feedback—a critical element in promoting student learning. Feedback not only clarifies why a response was graded a certain way but also guides students on how to improve. Studies now show that, with appropriate guidance, LLMs can simulate this instructional role.
 
-  In one study, Poličar et al. (2025) applied LLMs in a bioinformatics course to grade written assignments and provide feedback. Six models were tested, including commercial options (GPT-4, GPT-3.5, Claude) and open-source alternatives (LLaMA 2, Falcon 40B). Using a blind evaluation, students rated feedback without knowing its source. Notably, feedback from LLMs was often rated as helpful as that from human teaching assistants. Open-source models performed comparably to commercial ones, suggesting viable, privacy-conscious pathways for educational deployment.
-  
-  This success relied on prompt engineering: feeding the model structured inputs like the correct answer, grading rubrics, and example responses. This enabled models to produce relevant, contextualized feedback without the need for fine-tuning.
-  
-  Similarly, Impey et al. (2024) investigated GPT-4's grading capabilities in science writing. Given a rubric and model answer, GPT-4 reliably scored and explained its decisions, demonstrating instructional potential across domains.
-  
-  Both studies emphasize that when guided properly, LLMs can offer explanations and suggestions — not just evaluations. However, limitations remain. LLMs may overlook subtle domain-specific issues, and the quality of their feedback heavily depends on prompt clarity and structure.
+In one study, \citet{polikar2025} applied LLMs in a bioinformatics course to grade written assignments and provide feedback. Six models were tested, including commercial options (GPT-4, GPT-3.5, Claude) and open-source alternatives (LLaMA 2, Falcon 40B). Using a blind evaluation, students rated feedback without knowing its source. Notably, feedback from LLMs was often rated as helpful as that from human teaching assistants. Open-source models performed comparably to commercial ones, suggesting viable, privacy-conscious pathways for educational deployment.
 
-  \begin{table}[h!]
-    \centering
-    \begin{tabular}{|p{3.5cm}|p{6.5cm}|p{6.5cm}|}
-    \hline
-    \textbf{Aspect} & \textbf{Poličar et al. (2025)} & \textbf{Impey et al. (2024)} \\
-    \hline
-    Educational Context & Bioinformatics course (university-level, >100 students) & MOOCs in astronomy and astrobiology (Coursera platform) \\
-    \hline
-    Task Type & Written explanations of data analyses in assignments & Short essay-style answers to open-ended science questions \\
-    \hline
-    Models Evaluated & GPT-4, GPT-3.5, Claude, LLaMA 2 (13B, 70B), Falcon 40B & GPT-4 \\
-    \hline
-    Grading Setup & Blind evaluation comparing LLM feedback to human TA feedback & Comparison to instructor grades; GPT-4 guided with rubric and model answer \\
-    \hline
-    Feedback Approach & Prompt engineering using rubrics, sample answers, and solutions & Rubric-based grading and rubric generation by the model \\
-    \hline
-    Key Findings & LLM feedback rated equal to human TAs; open-source models performed well & GPT-4 grading reliable and more consistent than peer grading \\
-    \hline
-    Limitations & Occasional domain-specific misses; dependent on prompt quality & Performance tied closely to rubric design; limited subject scope \\
-    \hline
-    \end{tabular}
-    \caption{Summary of Studies on LLM-Based Feedback Generation}
-    \label{tab:llm_feedback_studies}
-    \end{table}
-\subsection{Scaling Automated Grading with Active Learning and Data Efficiency}
-One of the major limitations of early automated grading systems was the reliance on large, hand-labeled datasets. For each new exam question or assignment, new data had to be collected and annotated by human graders — a process that is expensive, time-consuming, and difficult to maintain across academic years or changing syllabi.
+This success relied on prompt engineering: feeding the model structured inputs like the correct answer, grading rubrics, and example responses. This enabled models to produce relevant, contextualized feedback without the need for fine-tuning.
+
+Similarly, \citet{impey2024} investigated GPT-4's grading capabilities in science writing. Given a rubric and model answer, GPT-4 reliably scored and explained its decisions, demonstrating instructional potential across domains.
+
+Both studies emphasize that when guided properly, LLMs can offer explanations and suggestions—not just evaluations. However, limitations remain. LLMs may overlook subtle domain-specific issues, and the quality of their feedback heavily depends on prompt clarity and structure.
+
+\begin{table}[h]
+  \centering
+  \caption{Summary of Studies on LLM-Based Feedback Generation}
+  \label{tab:llm_feedback_studies}
+  \begin{tabular}{@{}p{3.5cm}p{6.5cm}p{6.5cm}@{}}
+  \toprule
+  \textbf{Aspect} & \textbf{Poličar et al. (2025)} & \textbf{Impey et al. (2024)} \\
+  \midrule
+  Educational Context & Bioinformatics course (university-level, >100 students) & MOOCs in astronomy and astrobiology (Coursera platform) \\
+  \midrule
+  Task Type & Written explanations of data analyses in assignments & Short essay-style answers to open-ended science questions \\
+  \midrule
+  Models Evaluated & GPT-4, GPT-3.5, Claude, LLaMA 2 (13B, 70B), Falcon 40B & GPT-4 \\
+  \midrule
+  Grading Setup & Blind evaluation comparing LLM feedback to human TA feedback & Comparison to instructor grades; GPT-4 guided with rubric and model answer \\
+  \midrule
+  Feedback Approach & Prompt engineering using rubrics, sample answers, and solutions & Rubric-based grading and rubric generation by the model \\
+  \midrule
+  Key Findings & LLM feedback rated equal to human TAs; open-source models performed well & GPT-4 grading reliable and more consistent than peer grading \\
+  \midrule
+  Limitations & Occasional domain-specific misses; dependent on prompt quality & Performance tied closely to rubric design; limited subject scope \\
+  \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{Scaling Automated Grading with Active Learning}
+One of the major limitations of early automated grading systems was the reliance on large, hand-labeled datasets. For each new exam question or assignment, new data had to be collected and annotated by human graders—a process that is expensive, time-consuming, and difficult to maintain across academic years or changing syllabi.
 
 To address this, several studies have explored active learning and weak supervision as strategies to reduce labeling requirements while maintaining model performance. These approaches aim to identify the most informative student submissions for human annotation, so that models can learn effectively from fewer examples.
 
-A foundational contribution to this area is the Active Learning Literature Survey by Settles (2010), which outlines a taxonomy of strategies such as uncertainty sampling, query-by-committee, and expected error reduction. These techniques are highly relevant in educational contexts, where human labeling is costly and scalability is essential. The survey laid the groundwork for newer applications of active learning in grading tasks.
+A foundational contribution to this area is the Active Learning Literature Survey by \citet{settles2010}, which outlines a taxonomy of strategies such as uncertainty sampling, query-by-committee, and expected error reduction. These techniques are highly relevant in educational contexts, where human labeling is costly and scalability is essential. The survey laid the groundwork for newer applications of active learning in grading tasks.
 
-Building on these principles, Firoozi et al. (2023) applied active learning directly to the task of Automated Essay Scoring (AES). Their study evaluated three methods for selecting student essays for annotation:
+Building on these principles, \citet{firoozi2023} applied active learning directly to the task of Automated Essay Scoring (AES). Their study evaluated three methods for selecting student essays for annotation:
+
 \begin{itemize}
- {
-  \item Uncertainty-Based Selection (selecting essays where the model is least confident),
-  \item Topological-Based Selection (selecting a diverse, representative sample),
- \item and a Hybrid Method, which combines both uncertainty and representativeness.
- }
+  \item Uncertainty-Based Selection (selecting essays where the model is least confident)
+  \item Topological-Based Selection (selecting a diverse, representative sample)
+  \item Hybrid Method (combines both uncertainty and representativeness)
 \end{itemize}
-The results were significant: using just $1.8\%$ of the total dataset with the topological method, their model achieved 95\% of full-model accuracy. The hybrid method provided slightly lower accuracy but greater stability across sample sizes. The study also demonstrated the effectiveness of fine-tuning BERT on strategically selected essays — achieving strong grading performance with far fewer labels.
+
+The results were significant: using just $1.8\%$ of the total dataset with the topological method, their model achieved 95\% of full-model accuracy. The hybrid method provided slightly lower accuracy but greater stability across sample sizes. The study also demonstrated the effectiveness of fine-tuning BERT on strategically selected essays—achieving strong grading performance with far fewer labels.
 
 These findings suggest that LLM-powered grading systems do not need large training sets, especially when paired with smart sampling strategies. For institutions with limited resources, these methods offer a practical path forward: instructors only need to grade a small portion of responses, which are then used to train models that generalize to the rest of the cohort.
-\begin{table}[h!]
+
+\begin{table}[h]
   \centering
-  \begin{tabular}{|p{3.5cm}|p{6.5cm}|p{6.5cm}|}
-  \hline
-  \textbf{Aspect} & \textbf{Settles (2010)} & \textbf{Firoozi et al. (2023)} \\
-  \hline
-  Contribution Type & Survey of active learning strategies & Applied active learning to AES using real essay data \\
-  \hline
-  Context & General ML framework (text, image, bioinformatics, etc.) & AES on ASAP dataset with $\sim$13k student essays \\
-  \hline
-  Methods Evaluated & Uncertainty sampling, query-by-committee, error reduction & Uncertainty-based, topological, and hybrid selection \\
-  \hline
-  Models Used & Conceptual (broad ML) & BERT-based AES model \\
-  \hline
-  Key Findings & Active learning reduces labeling needs in various domains & 1.8\% of data yielded 95\% accuracy using topological selection \\
-  \hline
-  Implications for Grading & Foundation for later AES strategies & Effective grading at scale with minimal human-annotated data \\
-  \hline
-  Limitations & Not grading-specific & Model performance depends on sample quality and essay prompt complexity \\
-  \hline
-  \end{tabular}
   \caption{Summary of Studies on Scaling AES with Active Learning}
   \label{tab:active_learning_aes}
-  \end{table}
+  \begin{tabular}{@{}p{3.5cm}p{6.5cm}p{6.5cm}@{}}
+  \toprule
+  \textbf{Aspect} & \textbf{Settles (2010)} & \textbf{Firoozi et al. (2023)} \\
+  \midrule
+  Contribution Type & Survey of active learning strategies & Applied active learning to AES using real essay data \\
+  \midrule
+  Context & General ML framework (text, image, bioinformatics, etc.) & AES on ASAP dataset with $\sim$13k student essays \\
+  \midrule
+  Methods Evaluated & Uncertainty sampling, query-by-committee, error reduction & Uncertainty-based, topological, and hybrid selection \\
+  \midrule
+  Models Used & Conceptual (broad ML) & BERT-based AES model \\
+  \midrule
+  Key Findings & Active learning reduces labeling needs in various domains & 1.8\% of data yielded 95\% accuracy using topological selection \\
+  \midrule
+  Implications for Grading & Foundation for later AES strategies & Effective grading at scale with minimal human-annotated data \\
+  \midrule
+  Limitations & Not grading-specific & Model performance depends on sample quality and essay prompt complexity \\
+  \bottomrule
+  \end{tabular}
+\end{table}
   
-\subsection{Designing Prompts That Teach the Model how to Grade}.
-Unlike traditional machine learning models, which often require large datasets and model retraining, Large Language Models (LLMs) like GPT-4 and Claude offer a flexible alternative through prompt engineering. Rather than changing the model’s architecture or weights, researchers modify the input instructions — giving the model examples, rubrics, and specific grading criteria — in order to guide its behavior.
+\section{Designing Prompts That Teach Models How to Grade}
+Unlike traditional machine learning models, which often require large datasets and model retraining, Large Language Models (LLMs) like GPT-4 and Claude offer a flexible alternative through prompt engineering. Rather than changing the model's architecture or weights, researchers modify the input instructions—giving the model examples, rubrics, and specific grading criteria—in order to guide its behavior.
 
 This approach is especially valuable in educational settings where questions, learning outcomes, and grading schemes often change. Rather than training a new model every year, instructors can adapt their prompts to fit new assessment contexts.
 
-The study by Bengtsson and Kaliff (2024) investigated this strategy in the context of a university-level programming course. Students submitted answers to open-ended programming questions, and GPT-4 was used to assess their responses. The model was not fine-tuned; instead, it was guided using structured prompts that included:
-\begin{itemize}
-  {\item The expected solution,
-  \item Marking criteria,
-  \item And example answers.}
-\end{itemize}
-This allowed GPT-4 to evaluate correctness, partial understanding, and even misconceptions, much like a human grader. Importantly, the study found that the LLM’s scores aligned closely with instructor assessments, indicating that a well-structured prompt can replicate domain-specific human grading with high reliability.
+The study by \citet{bengtsson2024} investigated this strategy in the context of a university-level programming course. Students submitted answers to open-ended programming questions, and GPT-4 was used to assess their responses. The model was not fine-tuned; instead, it was guided using structured prompts that included:
 
-In a similar direction, Impey et al. (2024) explored whether GPT-4 could generate its own grading rubric for short-answer science responses. In this case, the model was first given a model answer and examples of correct responses. It then generated both the rubric and the grades for unseen answers. The model’s output was consistent with instructor grades, and its explanations added clarity to the assessment. However, the authors noted that the model’s grading quality depended heavily on how clearly the prompt was written, reinforcing the importance of human guidance in the prompt design process.
+\begin{itemize}
+  \item The expected solution
+  \item Marking criteria
+  \item Example answers
+\end{itemize}
+
+This allowed GPT-4 to evaluate correctness, partial understanding, and even misconceptions, much like a human grader. Importantly, the study found that the LLM's scores aligned closely with instructor assessments, indicating that a well-structured prompt can replicate domain-specific human grading with high reliability.
+
+In a similar direction, \citet{impey2024} explored whether GPT-4 could generate its own grading rubric for short-answer science responses. In this case, the model was first given a model answer and examples of correct responses. It then generated both the rubric and the grades for unseen answers. The model's output was consistent with instructor grades, and its explanations added clarity to the assessment. However, the authors noted that the model's grading quality depended heavily on how clearly the prompt was written, reinforcing the importance of human guidance in the prompt design process.
 
 These findings show that prompt engineering functions as a low-cost, high-impact alternative to model retraining. It empowers educators to adjust LLM behavior across subjects and cohorts, while maintaining grading consistency and interpretability. However, this method does require pedagogical expertise: poorly designed prompts can introduce ambiguity or bias, particularly in highly technical domains.
-\begin{table}[H]
+
+\begin{table}[h]
   \centering
-  \begin{tabular}{|p{3.5cm}|p{6.5cm}|p{6.5cm}|}
-  \hline
-  \textbf{Aspect} & \textbf{Bengtsson \& Kaliff (2024)} & \textbf{Impey et al. (2024)} \\
-  \hline
-  Context & Programming assessments (university-level CS course) & Short-answer science responses (astronomy MOOCs) \\
-  \hline
-  Model Used & GPT-4 & GPT-4 \\
-  \hline
-  Technique & Prompt engineering with expected answers and rubrics & Prompted GPT-4 to generate grading rubric and assign scores \\
-  \hline
-  Evaluation & Compared to instructor scores & Compared to instructor grading and peer evaluations \\
-  \hline
-  Findings & High agreement with human graders; accurate on domain concepts & GPT-4 reliable, but sensitive to prompt clarity \\
-  \hline
-  Limitations & Requires domain-specific prompt design & Rubric generation quality varies with input phrasing \\
-  \hline
-  \end{tabular}
   \caption{Summary of Studies Using Prompt Engineering and Rubric Conditioning}
   \label{tab:prompt_rubric_conditioning}
-  \end{table}
-  
-\subsection{A Subsection about Citation Style}
-Citations are important. Citation style for Computer Science is:
-\begin{itemize}
-\item When used in the text, use the authors with the date in brackets:\\ \citet{klein17} say very important things.
-\item When used as a reference after a face, put everything in brackets:\\ Import things are true \citep{klein17}.
-\end{itemize}
-
-\subsection{Compiling}
-Remember to compile multiple times to resolve references. Usually:
-\begin{verbatim}
-pdflatex file.tex
-bibtex file
-pdflatex file.tex
-pdflatex file.tex
-\end{verbatim}
-
-
-\chapter{Floats}
-\LaTeX\ decides how to place images. It also does the referencing for you as seen in \Cref{fig:thing1}. If you have subimages, they should have their own captions and labels -- look into the subfig or subfigure packages.
-
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=0.1\linewidth]{images/wits}
-	\caption{This is an image}
-	\label{fig:thing1}
-\end{figure}
-
-Figure captions are at the bottom. Table title are at the top of the table as seen in \Vref{tab:tab1}. There is a package called BookTabs which is \textit{way} better for tables and you should learn how to use that instead.
-
-\begin{table}[p]
-	\centering
-	\caption{Table Name}
-	\label{tab:tab1}
-\begin{tabular}{cc}
-	\hline
-	Col1 & Col2\\
-	\hline\hline 
-	R0,C0 & R0,C1 \\ 
-	R1,C0 & R1,C1 \\ 
-	\hline
-\end{tabular} 
+  \begin{tabular}{@{}p{3.5cm}p{6.5cm}p{6.5cm}@{}}
+  \toprule
+  \textbf{Aspect} & \textbf{Bengtsson \& Kaliff (2024)} & \textbf{Impey et al. (2024)} \\
+  \midrule
+  Context & Programming assessments (university-level CS course) & Short-answer science responses (astronomy MOOCs) \\
+  \midrule
+  Model Used & GPT-4 & GPT-4 \\
+  \midrule
+  Technique & Prompt engineering with expected answers and rubrics & Prompted GPT-4 to generate grading rubric and assign scores \\
+  \midrule
+  Evaluation & Compared to instructor scores & Compared to instructor grading and peer evaluations \\
+  \midrule
+  Findings & High agreement with human graders; accurate on domain concepts & GPT-4 reliable, but sensitive to prompt clarity \\
+  \midrule
+  Limitations & Requires domain-specific prompt design & Rubric generation quality varies with input phrasing \\
+  \bottomrule
+  \end{tabular}
 \end{table}
+  
+\section{Citation Style in Computer Science}
+Citations are important in academic writing, particularly in literature reviews. The citation style for Computer Science at our institution follows these conventions:
 
-Usually let \LaTeX\ handle the placement of floats unless you \textit{really} need to force it to do something else. The \texttt{float} package used above allows you to use \texttt{H} as the placement which means \textit{here and only here}. When using the float package, the placement options are:
-\begin{enumerate}
-\item h -- a gentle nudge to place it here if possible
-\item t -- top of a page
-\item b -- bottom of a page
-\item H -- here and only here, do not move it at all
-\item p -- on its own page
-\end{enumerate}
-
-
-\chapter{Some Referencing Tricks}
-CleverRef and VarioRef are helpful:
 \begin{itemize}
-	\item Normal Ref: See Figure \ref{fig:thing1}
-	\item CleverRef: See \Cref{fig:thing1} and \Cref{tab:tab1}
-	\item CleverRef+VarioRef: See \Vref{fig:thing1} and \Vref{tab:tab1}
+\item When referring to authors in the text, use the authors' names with the date in brackets:\\
+\citet{settles2010} outlines a taxonomy of active learning strategies.
+
+\item When citing as a reference after a statement, put everything in brackets:\\
+Active learning reduces the need for labeled training data \citep{firoozi2023}.
 \end{itemize}
 
-\chapter{IDE/Editors}
-Overleaf has a great online editor for latex. Use it. 
+This consistent citation style helps readers easily identify sources and follow the research lineage of ideas presented in your work.
+
+\chapter{Conclusion and Future Directions}
+
+\section{Summary of Key Findings}
+This literature review has examined current research on using Large Language Models for automated grading of free-text student submissions. The findings suggest that LLMs show significant promise in this domain, with several key capabilities emerging:
+
+\begin{itemize}
+\item LLMs can achieve grading accuracy comparable to human instructors when properly guided with rubrics and examples
+\item They can provide meaningful, personalized feedback that students find valuable
+\item Active learning techniques can drastically reduce the amount of labeled data needed
+\item Open-source models are approaching the capabilities of commercial ones, providing more accessible options
+\item Explainability techniques help make grading decisions more transparent and educational
+\end{itemize}
+
+\section{Limitations and Challenges}
+Despite these promising developments, several challenges remain:
+
+\begin{itemize}
+\item Domain adaptation remains difficult, especially for highly technical subjects
+\item Bias in training data may propagate to grading decisions
+\item Prompt engineering requires expertise and standardization
+\item Ethical considerations around fairness, transparency, and student privacy
+\item Integration with existing educational workflows and platforms
+\end{itemize}
+
+\section{Future Research Directions}
+Future research should focus on addressing these limitations through:
+
+\begin{itemize}
+\item Developing hybrid human-AI workflows that combine the strengths of both
+\item Creating standardized prompt libraries for different disciplines
+\item Exploring few-shot and zero-shot learning for new assessment types
+\item Designing more robust evaluation frameworks that consider multiple dimensions of grading quality
+\item Investigating student perceptions and the impact of AI feedback on learning outcomes
+\end{itemize}
+
+As LLMs continue to evolve, their role in educational assessment is likely to expand, potentially transforming how feedback is delivered and how educators allocate their time and expertise.
 
 \appendix
-\chapter{Extra Stuff}\label{app:extra}
-\section{What is an appendix?}\label{app:whatis}
+\chapter{Supplementary Materials}\label{app:extra}
 
-An appendix is useful when there is information that you need to include, but breaks the flow of your document, e.g. a large number of figures/tables may need to be shown, but maybe only one needs to be in the text and the rest are just included for completeness.
+\section{Sample Prompts for LLM Grading}\label{app:prompts}
+This appendix provides examples of effective prompts that can be used to guide LLMs in grading tasks. These templates are based on successful approaches identified in the literature.
+
+\section{Evaluation Metrics}\label{app:metrics}
+This section details common evaluation metrics used to assess the performance of automated grading systems, including:
+
+\begin{itemize}
+\item Agreement measures (Cohen's Kappa, Quadratic Weighted Kappa)
+\item Error metrics (MAE, RMSE)
+\item Correlation coefficients (Pearson, Spearman)
+\end{itemize}
+
+Understanding these metrics is essential for comparing different approaches and establishing their reliability compared to human grading.
 
 \nocite{*}
 

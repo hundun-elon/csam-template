@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex proposal"] 1744569046.5315 "proposal.aux" "proposal.bbl" "proposal" 1744569236.6311 0
+["bibtex proposal"] 1744570994.64418 "proposal.aux" "proposal.bbl" "proposal" 1744570997.16356 0
   "./named-wits.bst" 1743940853 25834 56eea4624f667e2501a72a17f2eb9d42 ""
-  "./references.bib" 1743940853 410 6325f4d585e0395807f59deba78d5d8e ""
-  "proposal.aux" 1744569235 6481 f82aa237416da0ae3e2c3eaab8a7294e "pdflatex"
+  "./references.bib" 1744570991 2241 2164265566bf242695b9d889dc8445db ""
+  "proposal.aux" 1744570996 6608 e6cc78c0013f57a59cd928227c7e3407 "pdflatex"
   (generated)
   "proposal.bbl"
   "proposal.blg"
   (rewritten before read)
-["pdflatex"] 1744569234.30325 "c:/Users/Sphamandla/OneDrive/Desktop/Hons Research/csam-template/proposal.tex" "proposal.pdf" "proposal" 1744569236.63237 0
+["pdflatex"] 1744570995.04584 "c:/Users/Sphamandla/OneDrive/Desktop/Hons Research/csam-template/proposal.tex" "proposal.pdf" "proposal" 1744570997.16472 0
   "C:/Users/Sphamandla/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1743943729 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/Sphamandla/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1743943641 12038508 29d0da8aa1c6a2fce7168716c69edf20 ""
   "C:/Users/Sphamandla/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -35,14 +35,12 @@
   "C:/Users/Sphamandla/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy10.tfm" 1136765053 1124 6c73e740cf17375f03eec0ee63599741 ""
   "C:/Users/Sphamandla/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy6.tfm" 1136765053 1116 933a60c408fc0a863a92debe84b2d294 ""
   "C:/Users/Sphamandla/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy8.tfm" 1136765053 1120 8b7d695260f3cff42e636090a8002094 ""
-  "C:/Users/Sphamandla/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmtt12.tfm" 1136765053 772 9a936b7f5e2ff0557fce0f62822f0bbf ""
   "C:/Users/Sphamandla/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb" 1136846148 33799 604d2ddf05dbd278eb243a128eb032ce ""
   "C:/Users/Sphamandla/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb" 1136846148 34869 e1ce30bc89749102259639e60ab677b3 ""
   "C:/Users/Sphamandla/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb" 1136846148 35118 a8551d23cfb4fcceb64f161610e925d2 ""
   "C:/Users/Sphamandla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1247596667 36741 0ee9e374ec3e30da87cdfb0ea3575226 ""
   "C:/Users/Sphamandla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1247596667 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "C:/Users/Sphamandla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
-  "C:/Users/Sphamandla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb" 1247596666 24252 1e4e051947e12dfb50fee0b7f4e26e3a ""
   "C:/Users/Sphamandla/AppData/Local/Programs/MiKTeX/fonts/vf/bitstrea/charter/bchb7t.vf" 1136765054 1372 ea6b112e4d27477183c2c2a90a3b7b01 ""
   "C:/Users/Sphamandla/AppData/Local/Programs/MiKTeX/fonts/vf/bitstrea/charter/bchbc7t.vf" 1136765054 1948 8756c185d16c133ab8b62dca88f95869 ""
   "C:/Users/Sphamandla/AppData/Local/Programs/MiKTeX/fonts/vf/bitstrea/charter/bchr7t.vf" 1136765054 1372 955cf021d0094e95829436b7bdab6458 ""
@@ -113,17 +111,17 @@
   "C:/Users/Sphamandla/AppData/Local/Programs/MiKTeX/tex/latex/subfigure/subfigure.sty" 1114278970 14815 1d3da78e0f66f3c62133fbabffd13cf5 ""
   "C:/Users/Sphamandla/AppData/Local/Programs/MiKTeX/tex/latex/tools/varioref.sty" 1730400552 44048 edecdc114fba170392d4f4efe0849b34 ""
   "C:/Users/Sphamandla/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "c:/Users/Sphamandla/OneDrive/Desktop/Hons Research/csam-template/proposal.tex" 1744569233 25195 c5711bb6959e8da9288acb11eba79938 ""
+  "c:/Users/Sphamandla/OneDrive/Desktop/Hons Research/csam-template/proposal.tex" 1744570002 53332 27b0a5017b11454590b941e5c701f2ba ""
   "images/wits.jpg" 1743940853 26152 0e4f27eda34fc71e5ac497a9c764f0b9 ""
   "natbib-add.tex" 1743940853 636 a8226bd14d5309828e2089346cc65d25 ""
   "natbib.sty" 1743940853 34984 1ae5e5a9dcf0b08cea595a12d727c4e7 ""
-  "proposal.aux" 1744569235 6481 f82aa237416da0ae3e2c3eaab8a7294e "pdflatex"
-  "proposal.bbl" 1744569046 420 2036dbbb4d8892ed1f9047c079dbe030 "bibtex proposal"
-  "proposal.lof" 1744569235 210 eddc7c4b0048bb5c395e589cde9f2b6b "pdflatex"
-  "proposal.lot" 1744569235 853 169239173a08b0cd93bf192c5aa7159e "pdflatex"
-  "proposal.out" 1744569235 4079 79782a3754ca26b022aeb84511d1adb7 "pdflatex"
-  "proposal.tex" 1744569233 25195 c5711bb6959e8da9288acb11eba79938 ""
-  "proposal.toc" 1744569235 1946 5ce6e7aad1cd8129f50e8336eba23b93 "pdflatex"
+  "proposal.aux" 1744570996 6608 e6cc78c0013f57a59cd928227c7e3407 "pdflatex"
+  "proposal.bbl" 1744570994 1895 51cdb74a1e27d42b23cfcfb7336ea860 "bibtex proposal"
+  "proposal.lof" 1744570996 80 8ef3760424b18d5315040b0f3a94f59e "pdflatex"
+  "proposal.lot" 1744570996 730 4eab66306a34b50e9c102a14467d0942 "pdflatex"
+  "proposal.out" 1744570996 4595 cffa30ab7f42b20a3c6826421d7cd0a3 "pdflatex"
+  "proposal.tex" 1744570002 53332 27b0a5017b11454590b941e5c701f2ba ""
+  "proposal.toc" 1744570996 1979 0f21a4b9b10c5aa2318329abb43a829b "pdflatex"
   (generated)
   "proposal.aux"
   "proposal.lof"
