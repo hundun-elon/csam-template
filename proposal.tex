@@ -276,7 +276,52 @@ The table below summarizes this study.
     \caption{Summary of Studies on LLM-Based Feedback Generation}
     \label{tab:llm_feedback_studies}
     \end{table}
-    
+\subsection{Scaling Automated Grading with Active Learning and Data Efficiency}
+One of the major limitations of early automated grading systems was the reliance on large, hand-labeled datasets. For each new exam question or assignment, new data had to be collected and annotated by human graders — a process that is expensive, time-consuming, and difficult to maintain across academic years or changing syllabi.
+
+To address this, several studies have explored active learning and weak supervision as strategies to reduce labeling requirements while maintaining model performance. These approaches aim to identify the most informative student submissions for human annotation, so that models can learn effectively from fewer examples.
+
+A foundational contribution to this area is the Active Learning Literature Survey by Settles (2010), which outlines a taxonomy of strategies such as uncertainty sampling, query-by-committee, and expected error reduction. These techniques are highly relevant in educational contexts, where human labeling is costly and scalability is essential. The survey laid the groundwork for newer applications of active learning in grading tasks.
+
+Building on these principles, Firoozi et al. (2023) applied active learning directly to the task of Automated Essay Scoring (AES). Their study evaluated three methods for selecting student essays for annotation:
+\begin{itemize}
+ {
+  \item Uncertainty-Based Selection (selecting essays where the model is least confident),
+  \item Topological-Based Selection (selecting a diverse, representative sample),
+ \item and a Hybrid Method, which combines both uncertainty and representativeness.
+ }
+\end{itemize}
+The results were significant: using just $1.8\%$ of the total dataset with the topological method, their model achieved 95\% of full-model accuracy. The hybrid method provided slightly lower accuracy but greater stability across sample sizes. The study also demonstrated the effectiveness of fine-tuning BERT on strategically selected essays — achieving strong grading performance with far fewer labels.
+
+These findings suggest that LLM-powered grading systems do not need large training sets, especially when paired with smart sampling strategies. For institutions with limited resources, these methods offer a practical path forward: instructors only need to grade a small portion of responses, which are then used to train models that generalize to the rest of the cohort.
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{|p{3.5cm}|p{6.5cm}|p{6.5cm}|}
+  \hline
+  \textbf{Aspect} & \textbf{Settles (2010)} & \textbf{Firoozi et al. (2023)} \\
+  \hline
+  Contribution Type & Survey of active learning strategies & Applied active learning to AES using real essay data \\
+  \hline
+  Context & General ML framework (text, image, bioinformatics, etc.) & AES on ASAP dataset with $\sim$13k student essays \\
+  \hline
+  Methods Evaluated & Uncertainty sampling, query-by-committee, error reduction & Uncertainty-based, topological, and hybrid selection \\
+  \hline
+  Models Used & Conceptual (broad ML) & BERT-based AES model \\
+  \hline
+  Key Findings & Active learning reduces labeling needs in various domains & 1.8\% of data yielded 95\% accuracy using topological selection \\
+  \hline
+  Implications for Grading & Foundation for later AES strategies & Effective grading at scale with minimal human-annotated data \\
+  \hline
+  Limitations & Not grading-specific & Model performance depends on sample quality and essay prompt complexity \\
+  \hline
+  \end{tabular}
+  \caption{Summary of Studies on Scaling AES with Active Learning}
+  \label{tab:active_learning_aes}
+  \end{table}
+  
+
+
+
 
 
 
