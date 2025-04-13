@@ -147,7 +147,7 @@ Can these models be harnessed to grade student responses automatically and meani
 --and perhaps even provide personalized feedback that guides learning?
 
 
-\section{Purpose of this review}
+\subsection{Purpose of this review}
 % \subsection{This is a Subsection}
 % \subsubsection{This is a subsubsection}
 The aim of this review is to syntesize and critically examine recent research
@@ -162,7 +162,7 @@ for technical subjects, one that minimizes educators workload while enhancing th
 
 
 
-\section{Brief overview of the key themes}
+\subsection{Brief overview of the key themes}
 Across the literature I have examimed, several key themes and technical strategies emerge.
 
 \begin{table}[h!]
@@ -191,7 +191,7 @@ Across the literature I have examimed, several key themes and technical strategi
   \end{table}
 We shall explore the above themes in deapth next section, critically comparing the approaches, results
 and proposed direction of each study.
-
+\chapter{Body}
 \section{Body.}
 \subsection{From Black-Box to transparent graders}
 \textit{We trust teachers because when we ask them why, they give us a sensible responses; can we do the same for machines?}\\
@@ -242,9 +242,41 @@ The table below summarizes this study.
   \end{table}
   
   \subsection{Feedback Generation and Instructional Support via Large Language Models}
+  Recent research has moved beyond simply using LLMs to assign grades, exploring their potential to deliver personalized feedback — a critical element in promoting student learning. Feedback not only clarifies why a response was graded a certain way but also guides students on how to improve. Studies now show that, with appropriate guidance, LLMs can simulate this instructional role.
 
+  In one study, Poličar et al. (2025) applied LLMs in a bioinformatics course to grade written assignments and provide feedback. Six models were tested, including commercial options (GPT-4, GPT-3.5, Claude) and open-source alternatives (LLaMA 2, Falcon 40B). Using a blind evaluation, students rated feedback without knowing its source. Notably, feedback from LLMs was often rated as helpful as that from human teaching assistants. Open-source models performed comparably to commercial ones, suggesting viable, privacy-conscious pathways for educational deployment.
+  
+  This success relied on prompt engineering: feeding the model structured inputs like the correct answer, grading rubrics, and example responses. This enabled models to produce relevant, contextualized feedback without the need for fine-tuning.
+  
+  Similarly, Impey et al. (2024) investigated GPT-4's grading capabilities in science writing. Given a rubric and model answer, GPT-4 reliably scored and explained its decisions, demonstrating instructional potential across domains.
+  
+  Both studies emphasize that when guided properly, LLMs can offer explanations and suggestions — not just evaluations. However, limitations remain. LLMs may overlook subtle domain-specific issues, and the quality of their feedback heavily depends on prompt clarity and structure.
 
-
+  \begin{table}[h!]
+    \centering
+    \begin{tabular}{|p{3.5cm}|p{6.5cm}|p{6.5cm}|}
+    \hline
+    \textbf{Aspect} & \textbf{Poličar et al. (2025)} & \textbf{Impey et al. (2024)} \\
+    \hline
+    Educational Context & Bioinformatics course (university-level, >100 students) & MOOCs in astronomy and astrobiology (Coursera platform) \\
+    \hline
+    Task Type & Written explanations of data analyses in assignments & Short essay-style answers to open-ended science questions \\
+    \hline
+    Models Evaluated & GPT-4, GPT-3.5, Claude, LLaMA 2 (13B, 70B), Falcon 40B & GPT-4 \\
+    \hline
+    Grading Setup & Blind evaluation comparing LLM feedback to human TA feedback & Comparison to instructor grades; GPT-4 guided with rubric and model answer \\
+    \hline
+    Feedback Approach & Prompt engineering using rubrics, sample answers, and solutions & Rubric-based grading and rubric generation by the model \\
+    \hline
+    Key Findings & LLM feedback rated equal to human TAs; open-source models performed well & GPT-4 grading reliable and more consistent than peer grading \\
+    \hline
+    Limitations & Occasional domain-specific misses; dependent on prompt quality & Performance tied closely to rubric design; limited subject scope \\
+    \hline
+    \end{tabular}
+    \caption{Summary of Studies on LLM-Based Feedback Generation}
+    \label{tab:llm_feedback_studies}
+    \end{table}
+    
 
 
 
