@@ -189,7 +189,74 @@ Across the literature I have examimed, several key themes and technical strategi
   \caption{Themes and Observations in AI-based Educational Assessment}
   \label{tab:grading_ai_themes}
   \end{table}
+We shall explore the above themes in deapth next section, critically comparing the approaches, results
+and proposed direction of each study.
+
+\section{Body.}
+\subsection{From Black-Box to transparent graders}
+\textit{We trust teachers because when we ask them why, they give us a sensible responses; can we do the same for machines?}\\
+In the early days of Automated Essay Scoring(AES), the focus was primaraly on \textbf{Accuracy}: this means
+really we were answering the question could a machine assign the same score a human would?
+Systems like e-raters while wildy adopted, remained blacked boxes. What this essentially means is 
+it can produce grades without justification. Without clear reasoning for scores, students were left with 
+limited guidance for improvement, and the instructors struggled to verify the fairness and reliability of these systems.\\
+Mok (2023) addressed this limitation by developing a deep learning AES model based on a Multi-Layer Perceptron (MLP) architecture, trained on the ASAP Grade 7 narrative writing dataset. The model predicted rubric-level scores across four dimensions — ideas, organization, style, and conventions. Importantly, this work introduced SHAP (SHapley Additive exPlanations) to improve interpretability. SHAP provided both global (dataset-wide) and local (individual essay) feature attributions, making it possible to understand how linguistic features (such as lexical diversity, grammatical structure, or cohesion) contributed to predicted scores.\\
+The model extracted over 1,500 linguistic indices using the SALAT toolkit, representing textual characteristics across five linguistic domains. Through regularization (Lasso and Ridge), the most informative features were selected. The SHAP analysis revealed that longer essays with richer lexical variety, clearer cohesion, and fewer grammatical errors were consistently rated higher by both human and automated systems. This provided not just a mechanism for score prediction, but a foundation for pedagogically meaningful feedback.\\
+Despite these advances, a challenge remained: although SHAP offered detailed attribution scores, the model lacked the ability to transform those insights into actionable, human-readable feedback for students. Mok (2023) acknowledges that while these explanations are useful to researchers and educators, additional work is needed to make them accessible and educationally impactful for learners.\\
+This work forms a foundation for more recent research that aims to not only predict scores with transparency, but to deliver feedback that supports learning. In doing so, it repositions the role of the AES system — from a passive grader to an active participant in the learning process.
+The table below summarizes this study.
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{|p{4.5cm}|p{10.5cm}|}
+  \hline
+  \textbf{Aspect} & \textbf{Details} \\
+  \hline
+  Study Objective & Develop an explainable deep learning model to score essays and highlight linguistic features affecting grades \\
+  \hline
+  Dataset Used & ASAP Grade 7 Narrative Essays (1,567 essays, scored on 0–3 scale across four rubrics) \\
+  \hline
+  Model Type & Multi-Layer Perceptron (MLP) with 2–6 hidden layers \\
+  \hline
+  Input Features & 1,592 linguistic features extracted via SALAT toolkit (e.g., cohesion, syntax, grammar) \\
+  \hline
+  Feature Selection & Lasso \& Ridge Regression; low-variance filtering \\
+  \hline
+  Explainability Technique & SHAP (KernelSHAP, DeepSHAP, GradientSHAP) \\
+  \hline
+  Top Features for High Scores & 
+  \begin{itemize}
+    \item Essay length
+    \item Lexical diversity
+    \item Sentence complexity
+    \item Cohesive ties
+    \item Correct grammar usage
+  \end{itemize} \\
+  \hline
+  Key Strength & SHAP provides global and local explanations; reveals what textual features matter most \\
+  \hline
+  Main Limitation & Explanations not yet in student-readable, feedback-ready form \\
+  \hline
+  \end{tabular}
+  \caption{Summary of Mok (2023) — Explainable AES with SHAP Analysis}
+  \label{tab:mok2023_summary}
+  \end{table}
   
+  \subsection{Feedback Generation and Instructional Support via Large Language Models}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \subsection{A Subsection about Citation Style}
 Citations are important. Citation style for Computer Science is:
