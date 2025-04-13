@@ -78,7 +78,6 @@
   \today
   }
 
-
   \vfill
   \vfill
   \includegraphics[width=1.5cm]{images/wits}
@@ -100,7 +99,7 @@ Abstract things....
 
 \phantomsection
 \begin{declaration}
-I, ---------, hereby declare the contents of this research proposal to be my own work.
+I, Sphamandla Mbuyazi, hereby declare the contents of this research proposal to be my own work.
 This proposal is submitted for the degree of Bachelor of Science with Honours in Computer Science at the University of the Witwatersrand.
 This work has not been submitted to any other university, or for any other degree.
 \end{declaration}
@@ -126,12 +125,72 @@ Thanks World.
 \pagenumbering{arabic}
 
 \chapter{Introduction}
-\section{Hello World}
-Introduction things...\\
-\section{Another Section}
-\subsection{This is a Subsection}
-\subsubsection{This is a subsubsection}
-This is just a paragraph
+\section{Introduction}
+% introduction paragraph.
+  In education technology, auto grading of free text has long been a sought-for solution,
+  particulary in large-scale assessments and technical subjects like Computer Science , where
+  assessments cannot be easily reduced to multiple choice questions. As the number of students enrolled in 
+  a course increases per instructor and the curriculum becomes more demanding, educators face a mounting pressure
+  to provide fair, consistant and fast feedback.\\
+
+  This posses a need to try to automate the process of marking and giving feedback. In the
+  state of art of education right now, your instructor grades your assessments and 4 years later 
+  provides you with a feedback, as we can argue without proof that early feedback helps students 
+  perform better in their studies. \\
+
+At the same time, Large Language Models(LLMs) like GPT-4, Claude, and open-source alternative
+such as LLaMA and DeepSeek are proving to be not just the conversational tools but
+they are capable evaluators, summarizers, and even tutors. Their impressive capacity
+for natural Language understanding and generation raises an exciting possibility:
+
+Can these models be harnessed to grade student responses automatically and meaningfully?
+--and perhaps even provide personalized feedback that guides learning?
+
+
+\section{Purpose of this review}
+% \subsection{This is a Subsection}
+% \subsubsection{This is a subsubsection}
+The aim of this review is to syntesize and critically examine recent research
+on the use of LLMs for autograding and feedback generation in educational contexts.
+We shall look at how these models have been applied to assess student submissions,
+what techniques have been used to improve reliability and fairness, and how feedback
+mechanisms are integrated to support and elevate student learning.\\
+By comparing methodologies, models and findings we aim to infer what is 
+working, what remains challenging, and where there's space for improvement.
+This should ultimately inform how we design our own LLM-based grading system 
+for technical subjects, one that minimizes educators workload while enhancing the feedback experienca 
+
+
+
+\section{Brief overview of the key themes}
+Across the literature I have examimed, several key themes and technical strategies emerge.
+
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{|p{5cm}|p{12cm}|}
+  \hline
+  \textbf{Theme} & \textbf{Approaches / Observations} \\
+  \hline
+  Grading Accuracy & LLMs like GPT-4 and fine-tuned BERT models show strong agreement with human graders. \\
+  \hline
+  Feedback Generation & Models like BeGrading and GPT-4 in science writing generate formative feedback students find useful. \\
+  \hline
+  Explainability & SHAP explanations and linguistic feature analysis offer insight into deep model decisions. \\
+  \hline
+  Data Efficiency & Active learning (uncertainty, topology, hybrid methods) helps reduce labeling needs. \\
+  \hline
+  Prompt Engineering & Careful prompt design significantly improves LLM grading consistency and relevance. \\
+  \hline
+  Peer/Human-in-the-loop & Hybrid systems using peer grading or instructor scaffolding improve fairness and training. \\
+  \hline
+  Open-Source Model Potential & LLaMA 2 and Falcon perform comparably to commercial models in bioinformatics grading tasks. \\
+  \hline
+  \end{tabular}
+  \caption{Themes and Observations in AI-based Educational Assessment}
+  \label{tab:grading_ai_themes}
+  \end{table}
+  
+
 \subsection{A Subsection about Citation Style}
 Citations are important. Citation style for Computer Science is:
 \begin{itemize}
