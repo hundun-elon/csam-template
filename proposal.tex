@@ -12,6 +12,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
+\usepackage{float}
 \usepackage{booktabs}
 \usepackage{parskip}
 \usepackage[all]{nowidow}
@@ -326,22 +327,18 @@ This approach is especially valuable in educational settings where questions, le
 
 The study by Bengtsson and Kaliff (2024) investigated this strategy in the context of a university-level programming course. Students submitted answers to open-ended programming questions, and GPT-4 was used to assess their responses. The model was not fine-tuned; instead, it was guided using structured prompts that included:
 \begin{itemize}
-  \item The expected solution,
-
+  {\item The expected solution,
   \item Marking criteria,
-
-  \item And example answers.
-
+  \item And example answers.}
 \end{itemize}
-
 This allowed GPT-4 to evaluate correctness, partial understanding, and even misconceptions, much like a human grader. Importantly, the study found that the LLM’s scores aligned closely with instructor assessments, indicating that a well-structured prompt can replicate domain-specific human grading with high reliability.
 
 In a similar direction, Impey et al. (2024) explored whether GPT-4 could generate its own grading rubric for short-answer science responses. In this case, the model was first given a model answer and examples of correct responses. It then generated both the rubric and the grades for unseen answers. The model’s output was consistent with instructor grades, and its explanations added clarity to the assessment. However, the authors noted that the model’s grading quality depended heavily on how clearly the prompt was written, reinforcing the importance of human guidance in the prompt design process.
 
 These findings show that prompt engineering functions as a low-cost, high-impact alternative to model retraining. It empowers educators to adjust LLM behavior across subjects and cohorts, while maintaining grading consistency and interpretability. However, this method does require pedagogical expertise: poorly designed prompts can introduce ambiguity or bias, particularly in highly technical domains.
-\begin{table}[h!]
+\begin{table}[H]
   \centering
-  \begin{tabular}{|p{4cm}|p{6.5cm}|p{6.5cm}|}
+  \begin{tabular}{|p{3.5cm}|p{6.5cm}|p{6.5cm}|}
   \hline
   \textbf{Aspect} & \textbf{Bengtsson \& Kaliff (2024)} & \textbf{Impey et al. (2024)} \\
   \hline
@@ -362,20 +359,6 @@ These findings show that prompt engineering functions as a low-cost, high-impact
   \label{tab:prompt_rubric_conditioning}
   \end{table}
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 \subsection{A Subsection about Citation Style}
 Citations are important. Citation style for Computer Science is:
 \begin{itemize}
